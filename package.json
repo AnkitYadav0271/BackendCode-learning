@@ -1,0 +1,16 @@
+{
+  "name": "learning_backend",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Ankit Yadav",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "mongoose": "^8.14.0"
+  }
+}
