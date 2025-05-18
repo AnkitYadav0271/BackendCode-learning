@@ -207,13 +207,14 @@ export const changePassword = asyncHandler(async (req,res)=>{
   const user =  await User.findById(req.user?._id);
   const isPasswordCorrect = await user.isPasswordCorrect(oldPassword);
 
-  if (!isPasswordCorrect){
-      throw new ApiError(400,"invalid old password");
+  if (!isPasswordCorrect) {
+      throw new ApiError(400, "invalid old password");
+  }
       user.password = newPassword;
      await user.save({validateBeforeSave: false})
       return res.status(200)
           .json(new ApiResponse(200,{},"password changed successfully"))
-  }
+
 
 
 })
